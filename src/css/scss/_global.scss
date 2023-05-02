@@ -1,0 +1,46 @@
+html {
+  scroll-behavior: smooth;
+  // overflow-x: hidden;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  // padding-top: 188px;
+}
+// #main {
+//   padding-top: 50px;
+
+//   margin-bottom: 50px;
+// }
+.container {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  @media #{$sm} {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+#go-to-top {
+  position: fixed;
+  z-index: 22;
+  right: 20px;
+  bottom: 20px;
+  transform: translate(0, 100px);
+  background-color: #fff;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+#go-to-top.active {
+  transform: translate(0, 0px);
+}
