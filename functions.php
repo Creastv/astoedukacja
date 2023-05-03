@@ -11,6 +11,36 @@ if ( ! function_exists( 'go_register_nav_menu' ) ) {
     }
     add_action( 'after_setup_theme', 'go_register_nav_menu', 0 );
 }
+function cr_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => __( 'Footer 1', 'cr' ),
+		'id'            => 'footer-1',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title-fo">',
+		'after_title'   => '</h4>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer 2', 'cr' ),
+		'id'            => 'footer-2',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title-fo">',
+		'after_title'   => '</h4>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer 3', 'cr' ),
+		'id'            => 'footer-3',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title-fo">',
+		'after_title'   => '</h4>',
+	) );
+
+}
+add_action( 'widgets_init', 'cr_widgets_init' );
+
 
 require_once get_template_directory() . '/func/enqueue-styles.php';
 require_once get_template_directory() . '/func/enqueue-scripts.php';
@@ -56,7 +86,7 @@ function filter_plugin_updates( $value ) {
 function ka_override_MCE_options($init)
   {
     $custom_colors = '
-          "575289", "Main color",
+          "20AEED", "Main color",
           "9df7de", "Main 2 color",
           "ffe681", "Main 3 color",
           "0d0b1e", "Black",
@@ -84,8 +114,8 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 if( function_exists('acf_add_options_page') ) {
   acf_add_options_page(array(
-    'page_title' => 'Gemma settings',
-    'menu_title' => 'Gemma settings',
+    'page_title' => 'Settings',
+    'menu_title' => 'Settings',
     'parent_slug' => 'themes.php',
   ));
   
@@ -137,5 +167,3 @@ document.addEventListener('cmplz_status_change_service', function(e) {
 <?php
 }
 add_action( 'wp_footer', 'cmplz_reload_after_consent' );
-
-

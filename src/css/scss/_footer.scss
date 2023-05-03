@@ -1,7 +1,6 @@
 #footer {
   position: relative;
-  background-color: $black;
-  background-image: url(../img/bg-footer.png);
+  background-color: #050d17;
   padding: 40px 0 0;
   .footer_bg {
     position: absolute;
@@ -20,15 +19,24 @@
   .row {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     @media #{$sm} {
       flex-wrap: wrap;
     }
     .col {
       margin-bottom: 30px;
-      &:nth-child(1) {
-        flex: auto;
+      @media #{$sm} {
+        width: 100%;
+      }
+      &:nth-child(3) {
         @media #{$sm} {
-          order: 2;
+          * {
+            text-align: center;
+          }
+          figure {
+            float: none;
+            margin: 0 auto;
+          }
         }
       }
     }
@@ -36,79 +44,32 @@
   * {
     color: #fff;
   }
-  .footer__socialmedia {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 30px;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    li {
-      a {
-        padding: 10px;
-        path {
-          fill: #ffff;
-        }
-        &:hover {
-          opacity: 0.8;
-        }
-      }
-      &:first-child {
-        a {
-          padding-left: 0px;
-        }
-      }
-    }
-  }
-  .footer__desc {
-    max-width: 380px;
-    width: 100%;
-    margin-bottom: 30px;
-    p {
-      margin: 0;
-      padding: 0;
-      font-size: 12px;
-      line-height: 20px;
-    }
-  }
-  ul.menu {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    @media #{$sm} {
-      gap: 10px;
-    }
-    li {
-      span,
-      a {
-        margin: 0;
-        padding: 0px;
-        font-size: 12px;
-        line-height: 20px;
-      }
-      &:nth-child(1) {
-        a,
-        span {
-          padding-left: 0px;
-        }
+
+  .navbar__brand {
+    margin-bottom: 20px;
+    span {
+      color: #fff;
+      font-size: 24px;
+      span {
+        color: $main;
       }
     }
   }
 
-  .footer__adrress {
-    a {
-      margin-bottom: 30px;
-      display: block;
-    }
-    p {
-      margin: 0;
-      padding: 0;
-      font-size: 12px;
-      line-height: 20px;
-    }
+  h3 {
+    margin: 0;
+  }
+  p {
+    margin-bottom: 0px;
+  }
+}
+
+.footer-info {
+  text-align: center;
+  opacity: 0.25;
+  width: 100%;
+  p {
+    padding: 20px 0 0;
+    margin: 0;
   }
 }

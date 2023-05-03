@@ -1,52 +1,106 @@
+body {
+  background-image: url(../img/bg-body.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#pojo-a11y-toolbar {
+  transition: all 0.3s !important;
+  @media #{$xs} {
+    top: 15px !important;
+  }
+}
+body.active {
+  #pojo-a11y-toolbar {
+    top: 0px !important;
+    @media #{$xs} {
+      top: 15px !important;
+    }
+  }
+}
+
+.pojo-a11y-toolbar-toggle {
+  // background-image: url(../img/toggler.png);
+  // background-size: cover;
+  // transition: all 0.3s !important;
+  // width: 63px;
+  // height: 63px;
+  // @media #{$sm} {
+  //   width: 32px;
+  //   height: 32px;
+  // }
+  // > a {
+  //   width: 100%;
+  //   height: 100%;
+  //   // background-color: transparent !important;
+  // }
+  // svg {
+  //   // display: none;
+  // }
+  border-top-left-radius: 100px !important;
+  border-bottom-left-radius: 100px;
+  overflow: hidden;
+  @media #{$sm} {
+    width: 32px;
+    height: 32px;
+    svg {
+      width: 100%;
+    }
+  }
+}
 #header {
   width: 100%;
-  padding: 20px 30px;
-  background-color: #fff;
+  padding: 0px 80px 0 30px;
+  @media #{$lg} {
+    padding: 35px 80px 30px 30px;
+  }
+
   @media #{$sm} {
-    padding: 15px;
+    padding: 15px 50px 15px 15px;
+    // position: relative !important;
   }
   .navbar {
     display: flex;
     align-items: center;
-    .navbar__navigation {
-      flex: auto;
-    }
-    @media #{$xx} {
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+    justify-content: space-between;
   }
 }
 #header.active {
   position: fixed;
   z-index: 99;
   top: 0px;
-  @media #{$xx} {
-    position: relative !important;
+  background-color: #060d18;
+  @media #{$lg} {
+    padding: 20px 80px 20px 30px;
+  }
+  @media #{$sm} {
+    padding: 15px 50px 15px 15px;
+    // position: relative !important;
+  }
+  .navbar__navigation ul li a {
+    padding: 15px;
+  }
+  .navbar__brand span {
+    font-size: 28px;
   }
 }
-.navbar__brand {
-  margin-right: 20px;
-  @media #{$lg} {
-    flex: auto;
-  }
 
-  @media #{$xs} {
-    width: 30%;
-    margin-right: 10px;
-  }
-  @media #{$xx} {
-    width: 70%;
-    margin-bottom: 10px;
-  }
-  img {
-    @media #{$xs} {
-      width: 100%;
-      height: auto;
+.navbar__brand {
+  flex: auto;
+  span {
+    font-family: "Luckiest Guy", cursive;
+    font-size: 53px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 0.3s linear;
+    @media #{$sm} {
+      font-size: 31px;
     }
-    @media #{$xx} {
-      width: 50%;
-      height: auto;
+    @media #{$xs} {
+      font-size: 28px;
+    }
+    span {
+      color: $main;
     }
   }
 }
@@ -74,22 +128,55 @@
     li {
       list-style: none;
       a {
+        position: relative;
+        display: block;
         text-decoration: none;
-        padding: 10px 15px;
-        color: $light-black;
+        padding: 50px 15px;
+        color: #fff;
         text-transform: uppercase;
         font-size: 15px;
         @media #{$lg} {
-          color: #fff;
+          padding: 20px 15px;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          width: 0%;
+          height: 3px;
+          top: 0px;
+          right: 0;
+          background-color: $main;
+          transition: all 0.3s linear;
         }
         &:hover {
-          color: $black;
+          &:before {
+            width: 100%;
+            left: 0;
+            right: auto;
+          }
+        }
+        &:active {
+          &:before {
+            width: 100%;
+            left: 0;
+            right: auto;
+          }
+        }
+        &:focus {
+          &:before {
+            width: 100%;
+            left: 0;
+            right: auto;
+          }
         }
       }
     }
     .current_page_item {
       a {
         font-weight: 600;
+        &:before {
+          width: 100% !important;
+        }
       }
     }
   }
@@ -97,44 +184,6 @@
 
 .navbar__navigation.active {
   left: 0px;
-}
-
-.navbar__icons {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  li {
-    a {
-      padding: 15px;
-      @media #{$sm} {
-        padding: 7.5px;
-      }
-    }
-    &:last-child {
-      a {
-        padding-right: 0px;
-        @media #{$lg} {
-          padding-right: 15px;
-        }
-        @media #{$sm} {
-          padding-right: 7.5px;
-        }
-      }
-    }
-  }
-}
-
-.navbar__swicher {
-  padding: 15px;
-  @media #{$sm} {
-    padding: 0 7.5px;
-  }
-  @media #{$xx} {
-    width: 20%;
-    text-align: right;
-  }
 }
 
 .navbar__toggler {
@@ -146,11 +195,12 @@
   }
   .navbar__toggler__btn {
     width: 28px;
+    cursor: pointer;
     span {
       display: block;
       width: 100%;
       height: 3px;
-      background-color: $light-black;
+      background-color: #fff;
       margin-bottom: 3px;
     }
   }

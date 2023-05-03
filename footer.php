@@ -1,4 +1,3 @@
-
 </div>
 </div>
 <?php get_template_part('templates-parts/footer/footer', 'contact'); ?>
@@ -7,18 +6,25 @@
     <span class="footer_bg"></span>
     <div class="container">
         <div class="row">
-            <div class="col">
-                <?php get_template_part('templates-parts/footer/footer', 'left'); ?>
-            </div>
-            <div class="col">
-                <?php get_template_part('templates-parts/footer/footer', 'right'); ?>
-            </div>
-
+            <?php get_template_part('templates-parts/header/header', 'brand'); ?>
         </div>
         <div class="row">
             <div class="col">
-                <?php get_template_part('templates-parts/footer/footer', 'info'); ?>
+
+                <?php do_action( 'before_sidebar' ); ?>
+                <?php if ( ! dynamic_sidebar( 'footer-1' ) ) : ?><?php endif; ?>
             </div>
+            <div class="col">
+                <?php do_action( 'before_sidebar' ); ?>
+                <?php if ( ! dynamic_sidebar( 'footer-2' ) ) : ?><?php endif; ?>
+            </div>
+            <div class="col">
+                <?php do_action( 'before_sidebar' ); ?>
+                <?php if ( ! dynamic_sidebar( 'footer-3' ) ) : ?><?php endif; ?>
+            </div>
+        </div>
+        <div class="row">
+            <?php get_template_part('templates-parts/footer/footer', 'info'); ?>
         </div>
     </div>
 </footer>

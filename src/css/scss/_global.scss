@@ -10,15 +10,16 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  background-color: #060d18;
+  color: #fff;
   overflow-x: hidden;
   // padding-top: 188px;
 }
-// #main {
-//   padding-top: 50px;
+#main {
+  // padding-top: 50px;
 
-//   margin-bottom: 50px;
-// }
+  margin-bottom: 50px;
+}
 .container {
   max-width: 1480px;
   margin: 0 auto;
@@ -43,4 +44,10 @@ body {
 
 #go-to-top.active {
   transform: translate(0, 0px);
+}
+
+.rank-math-breadcrumb {
+  a {
+    color: $main;
+  }
 }

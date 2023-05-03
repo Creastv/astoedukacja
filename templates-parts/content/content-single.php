@@ -16,7 +16,7 @@
             </div>
         </div>
     </header>
-    <div class="entry-content">
+    <div class="content entry-content">
         <?php if(is_singular('post')) { ?>
         <div class="meta-group">
             <div class="meta meta-category">
@@ -32,11 +32,12 @@
         <?php } ?>
 
         <?php the_content(); ?>
-
-        <?php if(is_singular('post')) { 
+    </div>
+    <?php if(is_singular('post')) { 
             $av_id = get_the_author_meta('ID');
             $im = get_field( 'avatar', 'user_'. $av_id );
         ?>
+    <div class="content entry-content">
         <div id="author-bio">
             <?php if($im) { ?>
             <div id="author-avatar"><img style="max-width:60px; height:auto;" src="<?php echo esc_url($im['url']); ?>" alt="<?php echo esc_attr($im['alt']); ?>" /></div>
@@ -84,16 +85,6 @@
             </div><!-- #author-details -->
         </div><!-- #author-bio -->
         <?php } ?>
-        <div class="kk-ata">
-            <div class="kk-ata__wraper">
-                <span>Twoja ocena:</span>
-                <?php echo kk_star_ratings(); ?>
-            </div>
-            <div class="kk-ata__wraper">
-                <span>Udostępnij:</span>
-                <?php echo do_shortcode("[addtoany]"); ?>
-            </div>
-        </div>
     </div>
 
 </article>

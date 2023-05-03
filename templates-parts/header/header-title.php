@@ -1,9 +1,11 @@
 <?php
-$display = get_field( 'wylacz_tytul_strony' );
+$header = get_field( 'naglowek_strony' );
 ?>
-<?php if($display == false) : ?>
 <?php // if( is_category() || is_author() || is_tag() || is_day() || is_month() || is_year() || is_tax()  ) { ?>
 <header class="entry-header">
+    <?php if($header) : ?>
+    <?php echo $header; ?>
+    <?php else : ?>
     <h1 class="entry-title">
         <?php if ( is_category() ) :
 					single_cat_title();					
@@ -37,7 +39,7 @@ $display = get_field( 'wylacz_tytul_strony' );
 						_e( 'Blog', 'go' );
 				endif; ?>
     </h1>
+    <?php endif;  ?>
     <?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
 </header>
 <?php // } ?>
-<?php endif;  ?>

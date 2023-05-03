@@ -8,12 +8,12 @@
     if (navFlag == false) {
       nav.classList.add("active");
       togglerNav.classList.add("active");
-      document.querySelector("body").classList.add("active");
+      // document.querySelector("body").classList.add("active");
       navFlag = true;
     } else {
       nav.classList.remove("active");
       togglerNav.classList.remove("active");
-      document.querySelector("body").classList.remove("active");
+      // document.querySelector("body").classList.remove("active");
       navFlag = false;
     }
     loadItemsNav();
@@ -61,9 +61,11 @@
     if (window.pageYOffset) {
       navbar.classList.add("active");
       document.querySelector("body").style.paddingTop = heightHeader.clientHeight + "px";
+      document.querySelector("body").classList.add("active");
     } else {
       navbar.classList.remove("active");
       document.querySelector("body").style.paddingTop = "0";
+      document.querySelector("body").classList.remove("active");
     }
   });
   // footer

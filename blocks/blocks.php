@@ -18,6 +18,20 @@ function register_acf_block_types() {
           wp_enqueue_style( 'go-posts',  get_template_directory_uri() . '/blocks/posts/posts.min.css' );
       },
     ));
+    acf_register_block_type(array(
+        'name'              => 'tytul',
+        'title'             => __('Tytuł'),
+        'render_template'   => 'blocks/tytul/tytul.php',
+        'category'          => 'formatting',
+        'icon' => array(
+          'background' => '#575289',
+          'foreground' => '#fff',
+          'src' => 'ellipsis',
+        ),
+      'mode'            => 'preview', 
+      'keywords'          => array( 'tytul' ),
+      'supports' => array( 'align' =>true ),
+    ));
     //  acf_register_block_type(array(
     //     'name'              => 'list',
     //     'title'             => __('List'),
