@@ -31,6 +31,17 @@ body {
   }
 }
 
+.container-narrow {
+  max-width: 768px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  @media #{$sm} {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 #go-to-top {
   position: fixed;
   z-index: 22;
@@ -40,6 +51,15 @@ body {
   background-color: #fff;
   padding: 10px;
   transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+  svg {
+    path {
+      fill: $main;
+    }
+  }
 }
 
 #go-to-top.active {
@@ -50,4 +70,9 @@ body {
   a {
     color: $main;
   }
+}
+
+.go-pagination {
+  width: 100%;
+  text-align: center;
 }

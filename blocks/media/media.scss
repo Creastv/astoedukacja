@@ -1,0 +1,36 @@
+@import "../../src/css/scss/variable";
+
+.media {
+  max-width: 952px;
+  margin: 0 auto;
+  .media__wraper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .media__item {
+    width: 50%;
+    padding: 20px;
+    @media #{$md} {
+      width: 100%;
+    }
+    .media__item__wraper {
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      h3 {
+        padding: 20px 10px;
+        a {
+          color: #fff;
+        }
+      }
+      &:hover {
+        a {
+          color: $main;
+        }
+      }
+    }
+  }
+}

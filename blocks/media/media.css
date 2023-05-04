@@ -1,0 +1,32 @@
+.media {
+  max-width: 952px;
+  margin: 0 auto;
+}
+.media .media__wraper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.media .media__item {
+  width: 50%;
+  padding: 20px;
+}
+@media only screen and (max-width: 998px) {
+  .media .media__item {
+    width: 100%;
+  }
+}
+.media .media__item .media__item__wraper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.media .media__item .media__item__wraper h3 {
+  padding: 20px 10px;
+}
+.media .media__item .media__item__wraper h3 a {
+  color: #fff;
+}
+.media .media__item .media__item__wraper:hover a {
+  color: #20AEED;
+}/*# sourceMappingURL=media.css.map */

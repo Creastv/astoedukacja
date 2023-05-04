@@ -1,7 +1,8 @@
 <?php
 add_theme_support('post-thumbnails');
-add_image_size( 'licytacja', 220, 220, array( 'center', 'center' ) );
+add_image_size( 'slider', 1400, 443, array( 'center', 'center' ) );
 add_image_size( 'post-item', 450, 300, array( 'center', 'center' ) );
+
 
 if ( ! function_exists( 'go_register_nav_menu' ) ) {
     function go_register_nav_menu(){
@@ -81,7 +82,7 @@ function filter_plugin_updates( $value ) {
 	}
 	return $value;
 }
-
+add_filter( 'site_transient_update_plugins', 'filter_plugin_updates' );
 // colors
 function ka_override_MCE_options($init)
   {

@@ -1,6 +1,7 @@
 <?php 
 $title = get_field( 'tytul' );
 $tag = get_field( 'tag' );
+$desc = get_field( 'krotki_opis' );
 
 $id = 'title-' . $block['id'];
 if( !empty($block['anchor']) ) {
@@ -22,5 +23,6 @@ echo '<div id="'.esc_attr($id).'"  class="go-title '.esc_attr($className).'" >';
 echo '<' . $tag .'>';
 echo $title;
 echo '</'  . $tag . '>';
+echo $desc ? '<p>' . $desc . '</p>' : false;
 echo '</div>';
 ?>

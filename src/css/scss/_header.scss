@@ -7,7 +7,7 @@ body {
 #pojo-a11y-toolbar {
   transition: all 0.3s !important;
   @media #{$xs} {
-    top: 15px !important;
+    top: 13px !important;
   }
 }
 body.active {
@@ -78,7 +78,7 @@ body.active {
     // position: relative !important;
   }
   .navbar__navigation ul li a {
-    padding: 15px;
+    padding: 18px;
   }
   .navbar__brand span {
     font-size: 28px;

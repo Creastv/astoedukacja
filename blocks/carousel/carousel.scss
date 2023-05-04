@@ -1,0 +1,72 @@
+@import "../../src/css/scss/variable";
+
+.carousel {
+  .carousel__item {
+  }
+  .swiper-slide-active {
+    position: relative;
+    z-index: 4;
+  }
+  .item__img {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  .item__content {
+    padding: 20px;
+    background-color: #151f2c;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      flex: auto;
+      min-width: 70%;
+      @media #{$sm} {
+        width: 100%;
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 0px;
+      }
+    }
+    .right {
+      width: 100%;
+      @media #{$sm} {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+.arrows {
+  @media #{$sm} {
+    display: none;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $main;
+  }
+}
+.swiper-pagination {
+  width: 30%;
+  right: 0px;
+  left: initial;
+  text-align: right;
+  padding: 13px 30px;
+  @media #{$sm} {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  .swiper-pagination-bullet {
+    background-color: #fff;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $main;
+  }
+}

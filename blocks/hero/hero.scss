@@ -1,0 +1,29 @@
+@import "../../src/css/scss/variable";
+
+.hero {
+  padding: 100px 0 50px 0;
+  .row {
+    display: flex;
+    .col {
+      width: 60%;
+      @media #{$lg} {
+        width: 70%;
+      }
+      @media #{$md} {
+        width: 70%;
+      }
+      @media #{$sm} {
+        width: 100%;
+      }
+    }
+    br {
+      @media #{$lg} {
+        display: none;
+      }
+    }
+  }
+}
+body {
+  background-image: url("../../src/img/bg-home.png") !important;
+  background-attachment: initial;
+}

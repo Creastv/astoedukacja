@@ -61,3 +61,139 @@ body.single-post {
     font-size: 12px;
   }
 }
+// posts wraper
+.posts-wraper {
+  display: flex;
+  flex-wrap: wrap;
+  // gap: 20px;
+  .post-item {
+    width: calc(33.333333%);
+    padding: 20px;
+    @media #{$md} {
+      width: 100%;
+    }
+    @media #{$sm} {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 0px;
+    }
+  }
+  .entry-content {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 50px;
+    @media #{$sm} {
+      margin-top: 30px;
+    }
+  }
+}
+
+// cart post
+.post-item {
+  img {
+    width: 100%;
+    height: auto;
+  }
+  hr {
+    border-top: 1px solid $light;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    @media #{$xxlg} {
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+    @media #{$md} {
+      flex-wrap: nowrap;
+    }
+    @media #{$sm} {
+      flex-wrap: nowrap;
+      padding: 0 0 10px;
+    }
+    @media #{$xs} {
+      flex-wrap: wrap;
+    }
+  }
+  h2 {
+    color: #fff;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 600;
+    @media #{$xxlg} {
+      width: 100%;
+      padding-right: 0px;
+      font-size: 19px;
+      line-height: 25px;
+    }
+    @media #{$md} {
+      padding-right: 0px;
+    }
+    @media #{$sm} {
+      padding-right: 20px;
+      margin: 10px 0;
+    }
+    @media #{$xs} {
+      padding-right: 0px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        color: $main;
+      }
+    }
+  }
+  &:hover {
+    h2,
+    a {
+      color: $main;
+    }
+  }
+}
+
+.meta-group {
+  display: flex;
+  //   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  .meta {
+    padding: 10px;
+    @media #{$sm} {
+      padding: 10px 2px;
+    }
+    * {
+      font-size: 12px;
+      color: #fff;
+    }
+  }
+  .meta-pub {
+    text-align: right;
+  }
+  .meta-category {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        a {
+          font-size: 12px;
+          padding: 5px;
+          color: #fff;
+          text-decoration: none;
+          &:hover {
+            color: $main;
+          }
+        }
+      }
+    }
+  }
+}
