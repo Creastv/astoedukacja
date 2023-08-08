@@ -19,10 +19,10 @@
     <div class="content entry-content">
         <?php if(is_singular('post')) { ?>
         <div class="meta-group">
-            <div class="meta meta-category">
-                <span><?php _e(' Kategoria: ', 'go' ); ?></span>
-                <?php the_category();?>
-            </div>
+        <div class="meta meta-category">
+                  <!--  <span><?php _e(' Kategoria: ', 'go' ); ?></span>
+                <?php // the_category();?>-->
+            </div> 
             <div class="meta meta-pub">
                 <span><?php _e('Opublikowano: ', 'go' ); ?></span>
                 <time class="meta meta-data-pub published" datetime="<?php the_time() ?>"> <span><?php the_time('d.m.Y');?></span></time>
