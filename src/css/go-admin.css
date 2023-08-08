@@ -385,6 +385,25 @@ body {
   margin: 0;
 }
 
+.footer-info__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+@media only screen and (max-width: 998px) {
+  .footer-info__wrap {
+    justify-content: center;
+    gap: 0px;
+  }
+}
+.footer-info__wrap > p {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 body {
   background-image: url(../img/bg-body.png);
   background-size: 100%;

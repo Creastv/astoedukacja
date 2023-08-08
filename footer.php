@@ -22,6 +22,7 @@
                 <?php if ( ! dynamic_sidebar( 'footer-3' ) ) : ?><?php endif; ?>
             </div>
         </div>
+
         <div class="row">
             <?php get_template_part('templates-parts/footer/footer', 'info'); ?>
         </div>
