@@ -279,6 +279,35 @@ body {
   text-align: center;
 }
 
+.personel .personel__item .personel__item__wraper .right {
+  padding: 10px 20px;
+  width: calc(100% - 100px);
+}
+
+.wpcf7-spinner {
+  position: absolute;
+  top: 8px;
+  right: -16px;
+}
+
+.btn-f {
+  position: relative;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  margin: 2em 0.5em 1em;
+  padding: 0.2em 1em;
+  border: 2px solid #00a0d2;
+  border-radius: 10px;
+  margin: 0 0 20px 0;
+  padding: 20px;
+  width: 100%;
+}
+
+#go-to-top {
+  background: none;
+}
+
 #footer {
   position: relative;
   background-color: #050d17;
