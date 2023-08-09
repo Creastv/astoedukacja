@@ -1,7 +1,7 @@
 #footer {
   position: relative;
   background-color: #050d17;
-  padding: 40px 0 0;
+  padding: 20px 0 0;
   .footer_bg {
     position: absolute;
     z-index: 1;
@@ -78,7 +78,7 @@
 .footer-info__wrap {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 15px;
   @media #{$md} {

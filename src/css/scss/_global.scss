@@ -25,6 +25,9 @@ body {
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
+  @media #{$xlg} {
+    max-width: 1260px;
+  }
   @media #{$sm} {
     padding-left: 15px;
     padding-right: 15px;
@@ -45,7 +48,7 @@ body {
 #go-to-top {
   position: fixed;
   z-index: 22;
-  right: 20px;
+  right: 10px;
   bottom: 20px;
   transform: translate(0, 100px);
   background-color: #fff;

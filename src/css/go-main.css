@@ -29,6 +29,7 @@ p {
   margin: 0;
   margin-bottom: 20px;
   line-height: 1.4;
+  text-align: justify;
 }
 
 a {
@@ -228,6 +229,11 @@ body {
   padding-left: 30px;
   padding-right: 30px;
 }
+@media only screen and (max-width: 1400px) {
+  .container {
+    max-width: 1260px;
+  }
+}
 @media only screen and (max-width: 768px) {
   .container {
     padding-left: 15px;
@@ -251,7 +257,7 @@ body {
 #go-to-top {
   position: fixed;
   z-index: 22;
-  right: 20px;
+  right: 10px;
   bottom: 20px;
   transform: translate(0, 100px);
   background-color: #fff;
@@ -311,7 +317,7 @@ body {
 #footer {
   position: relative;
   background-color: #050d17;
-  padding: 40px 0 0;
+  padding: 20px 0 0;
 }
 #footer .footer_bg {
   position: absolute;
@@ -388,7 +394,7 @@ body {
 .footer-info__wrap {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 15px;
 }
